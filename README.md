@@ -14,9 +14,10 @@ Nanopore sequencing involves passing a DNA molecule through a tiny protein nanop
 ### **Illumina sequencing** ###
 Illumina sequencing, also known as sequencing by synthesis (SBS), is a method that generates large volumes of DNA sequence data with high accuracy. It is commonly used for whole genome sequencing, targeted sequencing, RNA sequencing, and other applications. 
 
-# Sequencing process:
+# 1. SEQUENCING:
+The first step to creating a genome assembly is to sequence the DNA from an organism. The following notes describe, in detail, the SEQUENCING PROCESS:
 
-# 1. Library preparation
+# 1a. Library preparation
 
 **DNA extraction:** In both Nanopore and Illumina sequencing, high molecular weight DNA is extracted from the sample (we used DNEasy blood and tissue kit)
 
@@ -54,7 +55,7 @@ The DNA is prepared for sequencing by attaching adapters to the ends of the DNA 
 
 *-In DNA sequencing, primers are used to initiate the sequencing reactions. The primer binds to the template DNA and provides a starting point for DNA polymerase to synthasise the new strand while incoroporating fluorescently labeled nucleotides to determine the sequence.*
 
-# 2. Loading the flow cell
+# 1b. Loading the flow cell
 The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
 
 #### ***What is a flow cell????*** 
@@ -77,7 +78,7 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 
 **Bridge amplification**: In the flow cell, each DNA fragment with its adapters is locally amplified. This process creates millions of clusers of identical DNA fragments. Each cluster originates from a single DNA fragment and contains many copies of it. 
 
-# 3. Sequencing**
+# 1c. Sequencing
 
 ### *Nanopore* ###
 **DNA translocation**: The DNA is driven through the nanopores. As they pass through, the electrical current changes in a manner that is specific to each DNA base. This current change is continuously recorded. 
@@ -93,11 +94,6 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 
 **Read generation**: The sequencing machine records these fluorescent signals and generates a sequence read, which is the raw sequence data of the DNA fragment
 
-# 4. Data Analysis
-**- Base Calling**: The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA.
-
-**- Data processing**: The basecalled sequences are then assembled and analysed to provide insights into the genetic information. 
-
 # Key features of PromethION:
 **Long Reads:** One of the main advantages of ONT is its ability to generate very long reads, often spanning thousands to hundreds of thousands of bases. This is useful for resolving complex genomic regions, repetitive sequences, and structural variants. 
 
@@ -111,6 +107,66 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 **Short reads**: Illumina technology typically produces relatively short reads, often ranging from 75-300 bases in length. These reads are highly accurate, but may need to be assembled to cover longer genomic regions 
 
 **High accuracy**: Illumina sequencing is known for its high accuracy and reliability, making it a popular choice for various genomic studies 
+
+**Obtaining high quality sequencing reads is important. In my methods, I used ONT PromethION long reads to assemble my genome (as it can resolve repetitive regions and generally more informative), and then used Illumina short-reads to polish my assembly (as Illumina is more accurate).**
+
+# GENOME ASSEMBLY FROM THE RAW SEQUENCE DATA
+
+**- Base Calling**: The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA. Essentially it's the process of converting the raw data produced during sequencing into readable nucleotide sequences. 
+
+**Even though I was provided with FASTQ files (i.e., already basecalled) from ONT, we decided to do basecalling of the raw SLOW5 files ourselves. This is because ONT still uses GUPPY to basecall and we wanted to use Dorado which is more accurate**
+
+#### What is Dorado? 
+
+Dorado is a basecaller designed for Oxford Nanopore Technologies sequencing data. It is known for its ability to process long-read sequencing data with a focus on **high accuracy**. Dorado uses machine learning techniques to improve basecalling performance and reduce error rates compared to some earlier methods. 
+
+Dorado (developed by Nabsys) is a good basecaller due to its improved accuracy and ability to handle the complexities of long-read sequencing. Compared to Guppy (which was developed by ONT, and is still robust with extensive support and consistently good across various datasets), Dorado potentially offers improved basecalling accuracy, especially for long reads and better performance in specific scenarios (e.g., complex or noisy data). Apparently, ONT will begin using Dorado as their main basecaller in the future! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**- Data processing**: The basecalled sequences are then assembled and analysed to provide insights into the genetic information. 
+
+
+
+# 2. OVERLAPPING
+Once the DNA fragments are sequenced, the next step is to find overlaps between these fragments. This is crucial because the DNA fragments generated from sequencing are usually too short to cover the entire genome, and identifying where they overlap helps in reconstructing the original sequence. 
+
+**Overlap-Layout-Consensus**- this algorithmic approach involves identifying overlaps between fragments, creating a layout of these overlaps, and then generating a consensus sequence that best represents the original DNA. 
+
+**De Bruijn graphs**: In this method, short sequences (k-mers) are used to build up a graph where these nodes represent these k-mers, and edges represent overlaps. The genome assembly is constructed by traversing the graph and connecting nodes to reconstruct the original sequences. 
+
+# 3. ASSEMBLING 
+The assembly process involves stitching together the overlapping fragments to form longer, continuous sequences called contigs, which can then make up the complete genome. This can be broadly categorised into two types: de novo (no reference genome) and reference based (aligning reads to a known reference genome of a closely related species and using that alignment to assemble the genome). My genome assembly is DE NOVO!!
+
+In de novo assembly, the goal is to construct the complete genome sequence directly from the sequenced DNA fragments. 
+
+### Key steps in De Novo Genome Assembly ###
+
+#### Sequencing
+
+
 
 
 
