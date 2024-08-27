@@ -112,9 +112,9 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 
 # GENOME ASSEMBLY FROM THE RAW SEQUENCE DATA
 
-**- Base Calling**: The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA. Essentially it's the process of converting the raw data produced during sequencing into readable nucleotide sequences. 
+**1. Base Calling**: 
 
-#### What is basecaller?
+The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA. Essentially it's the process of converting the raw data produced during sequencing into readable nucleotide sequences. The output of basecalling is a sequence file (e.g., in formats like FASTQ). 
 
 **Even though I was provided with FASTQ files (i.e., already basecalled) from ONT, we decided to do basecalling of the raw SLOW5 files ourselves. This is because ONT still uses GUPPY to basecall and we wanted to use Dorado which is more accurate**
 
@@ -123,6 +123,10 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 Dorado is a basecaller designed for Oxford Nanopore Technologies sequencing data. It is known for its ability to process long-read sequencing data with a focus on **high accuracy**. Dorado uses machine learning techniques to improve basecalling performance and reduce error rates compared to some earlier methods. 
 
 Dorado (developed by Nabsys) is a good basecaller due to its improved accuracy and ability to handle the complexities of long-read sequencing. Compared to Guppy (which was developed by ONT, and is still robust with extensive support and consistently good across various datasets), Dorado potentially offers improved basecalling accuracy, especially for long reads and better performance in specific scenarios (e.g., complex or noisy data). Apparently, ONT will begin using Dorado as their main basecaller in the future! 
+
+**2. Demultiplexing**
+
+
 
 
 
