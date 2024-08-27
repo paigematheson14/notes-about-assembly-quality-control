@@ -114,6 +114,8 @@ The prepared library (including adapters/barcodes)is loaded onto a flow cell whi
 
 **- Base Calling**: The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA. Essentially it's the process of converting the raw data produced during sequencing into readable nucleotide sequences. 
 
+#### What is basecaller?
+
 **Even though I was provided with FASTQ files (i.e., already basecalled) from ONT, we decided to do basecalling of the raw SLOW5 files ourselves. This is because ONT still uses GUPPY to basecall and we wanted to use Dorado which is more accurate**
 
 #### What is Dorado? 
