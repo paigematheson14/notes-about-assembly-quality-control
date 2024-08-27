@@ -30,7 +30,7 @@ Illumina sequencing, also known as sequencing by synthesis (SBS), is a method th
 
 **Amplification**: The library is often amplified (increased in quantity) through a process called PCR (polymerase chain reaction). This ensures there is enough material for sequencing. 
 
-### ***What is an adapter??????*** ###
+#### ***What is an adapter??????*** 
 *In the context of DNA sequencing, an adapter is a short, synthetic, DNA sequence that is attached to the ends of DNA fragments during library preperation. Adapters serve several important functions in the sequencing process. For example:*
 
 *- They **bind to the sequencer** (e.g., the flow cell or nanopores) allowing the DNA fragments to be captured and processed by the sequencer*
@@ -41,7 +41,7 @@ Illumina sequencing, also known as sequencing by synthesis (SBS), is a method th
 
 *During library preparation, adapters (which can either be **universal**; standard adapters designed to interact with the common features of the sequencer, or **custom**; adapters specific for certain sequencing platforms and may include additional features such as unique index sequences for multiplexing or specific sequences needed for certain technologies) are ligated (chemically joined) to the ends of the DNA fragments. This process is crucial for enabling the fragments to be recognised and processed by the sequencing technology. Once the DNA fragments are attached to the adapters, they are loaded onto the sequencer. These adapters facilitate the binding of these fragments to the sequencing platform, and endable the sequencing reactions to occur. After sequencing, the data generated includes the sequences of DNA fragments along with the adapter sequences. During data analysis, the adapters are usually trimmed off to focus on the actual genomic sequences* 
 
-### ***What is a primer?????*** ###
+#### ***What is a primer?????*** 
 
 *A primer is a short, single stranded nucleic acid sequence used to initiate the synthesis of a complementary strand of DNA or RNA. Primers are crucial for various applications, including polymerase chain reaction (PCR) sequencing, and other nucleic acid amplification methods.*
 
@@ -56,7 +56,7 @@ Illumina sequencing, also known as sequencing by synthesis (SBS), is a method th
 # 2. Loading the flow cell
 Flow cell: The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
 
-### ***What is a flow cell????*** ###
+#### ***What is a flow cell????*** 
 
 *A flow cell is the environment where the actual sequencing reactions take place. The flow cell usually consists of a series of channels or wells where DNA molecules are held and processed. These channels are designed to facilitate the flow of fluids and reagents needed for sequencing.*
 
