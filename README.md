@@ -55,7 +55,7 @@ The DNA is prepared for sequencing by attaching adapters to the ends of the DNA 
 *-In DNA sequencing, primers are used to initiate the sequencing reactions. The primer binds to the template DNA and provides a starting point for DNA polymerase to synthasise the new strand while incoroporating fluorescently labeled nucleotides to determine the sequence.*
 
 # 2. Loading the flow cell
-Flow cell: The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
+The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
 
 #### ***What is a flow cell????*** 
 
