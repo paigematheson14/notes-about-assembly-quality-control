@@ -20,9 +20,10 @@ Illumina sequencing, also known as sequencing by synthesis (SBS), is a method th
 
 **DNA extraction:** In both Nanopore and Illumina sequencing, high molecular weight DNA is extracted from the sample (we used DNEasy blood and tissue kit)
 
-**Nanopore Library construction:** The DNA is prepared for sequencing by attaching adapters to the ends of the DNA fragments. These adapters are necessary for the DNA to interact with the nanopores and be recognised by the sequencer.
+#### **Nanopore Library construction:** 
+The DNA is prepared for sequencing by attaching adapters to the ends of the DNA fragments. These adapters are necessary for the DNA to interact with the nanopores and be recognised by the sequencer.
 
-### **Illumina Library construction:** ###
+#### **Illumina Library construction:** 
 
 **Fragmentation**: The extracted DNA is fragmented into smaller pieces
 
