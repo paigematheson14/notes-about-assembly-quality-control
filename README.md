@@ -152,7 +152,7 @@ Nanoplot is a tool designed for visualising and assessing the quality of long-re
 
 ### Quality visualisation 
 
-### Read Length Distribution
+### +Read Length Distribution
 
 Displays histograms or cumulative plots of read lengths to provide an overview of the size distribution of the reads in your dataset. 
 
@@ -182,7 +182,7 @@ Longer reads are generally more challenging to generate with high accuracy. A di
 For long read sequencing technologies, **longer reads are advantageous** for assembing complex genomes and resolving repetitive regions. A distribution with a high proportion of long reads is beneficial for assembly quality. 
 
 
-### Read Quality Scores
+### +Read Quality Scores
 
 Shows distributions of quality scores, helping to assess the accuracy of the sequencing data. Read quality scores measure the *confidence in each base call made during sequencing*. In other words, they quantify the likelihood that a particular base (C, T, G, A) is **correct**. They are typically represented as Phred scores in sequencing data 
 
@@ -194,7 +194,7 @@ Quality score distributions are often visualised using histograms, showing the f
 
 Accurate quality scores are crucial for reliable variant calling, as low-quality basecalls can lead to false positives or missed variants. High quality reads are essential for constructing accurate genome assemblies, especially in regions of the genome that are complex or repetitive. 
 
-### Base composition
+### +Base composition
 Refers to the relative abundance of the four nucleotide bases. Analysing base composition can provide valuable insights including sequence characteristics, genomic features, and the quality of sequencing data. Nanoplot provides plots of the base composition (e.g., GC content) to understand the nucleotide distribution across the reads. 
 
 **Quality control**
