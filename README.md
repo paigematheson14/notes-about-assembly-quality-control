@@ -48,11 +48,11 @@ The DNA is prepared for sequencing by attaching adapters to the ends of the DNA 
 
 *They are typically 15-30 nucleotides long. Their sequence is designed to be complementary to a specific region of the target DNA or RNA. This complementary binding ensures that the primer can anneal to the correct location on the template strand. They are also designed with a specific orientation to match the direction in which DNA polymerase will synthesise the new strand.*
 
-*Their primary function is to initiate DNA synthesis: 
+*Their primary function is to initiate DNA synthesis:*
 
--In PCR, primers are used to amplify specific regions of DNA. Two primers are used: a forward primer and a reverse primer. The forward primer binds to the 3' end of the target sequence on one strand, while the reverse primer binds to the complementary strand in the opposite direction. This setup allows DNA polymerase (an enzyme that plays a crucial role in DNA replication and repair; it catalyses the synthesis of new DNA strands by adding nucleotides to a growing DNA chain based on the template strand) to extend the new strand from both primers, amplifying the region between them. 
+*-In PCR, primers are used to amplify specific regions of DNA. Two primers are used: a forward primer and a reverse primer. The forward primer binds to the 3' end of the target sequence on one strand, while the reverse primer binds to the complementary strand in the opposite direction. This setup allows DNA polymerase (an enzyme that plays a crucial role in DNA replication and repair; it catalyses the synthesis of new DNA strands by adding nucleotides to a growing DNA chain based on the template strand) to extend the new strand from both primers, amplifying the region between them.*
 
--In DNA sequencing, primers are used to initiate the sequencing reactions. The primer binds to the template DNA and provides a starting point for DNA polymerase to synthasise the new strand while incoroporating fluorescently labeled nucleotides to determine the sequence.*
+*-In DNA sequencing, primers are used to initiate the sequencing reactions. The primer binds to the template DNA and provides a starting point for DNA polymerase to synthasise the new strand while incoroporating fluorescently labeled nucleotides to determine the sequence.*
 
 # 2. Loading the flow cell
 Flow cell: The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
