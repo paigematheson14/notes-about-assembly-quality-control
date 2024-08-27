@@ -4,9 +4,6 @@ This repository includes notes about genome assemblies and assessing the quality
 # What is a genome assembly?
 A genome assembly is the process of piecing together the complete DNA sequence of an organism's genome from shorter DNA fragments. It is an essential step in genomics and involves several key stages. 
 
-**1. Sequencing**
-The genome is first broken into many small fragments, which are then sequenced to determine their nucleotide sequences (the order of DNA bases: adenine (A), cytosine (C), guanine (G), and thymine (T). In other words, the DNA of an organism is read to determine its nucleotide sequence. 
-
 There are several different methods for sequencing. The data I have for my genome assemblies are **long-read PromethION Nanopore data** and **short-read Illumina data**. 
 
 **PromethION Nanopore**
@@ -17,9 +14,9 @@ Nanopore sequencing involves passing a DNA molecule through a tiny protein nanop
 **Illumina sequencing**
 Illumina sequencing, also known as sequencing by synthesis (SBS), is a method that generates large volumes of DNA sequence data with high accuracy. It is commonly used for whole genome sequencing, targeted sequencing, RNA sequencing, and other applications. 
 
-**Sequencing process:**
+# Sequencing process:
 
-**1. Library preparation**
+# 1. Library preparation
 **DNA extraction:** In both Nanopore and Illumina sequencing, high molecular weight DNA is extracted from the sample (we used DNEasy blood and tissue kit)
 
 *Nanopore*:
@@ -46,7 +43,7 @@ Illumina sequencing, also known as sequencing by synthesis (SBS), is a method th
 -In PCR, primers are used to amplify specific regions of DNA. Two primers are used: a forward primer and a reverse primer. The forward primer binds to the 3' end of the target sequence on one strand, while the reverse primer binds to the complementary strand in the opposite direction. This setup allows DNA polymerase (an enzyme that plays a crucial role in DNA replication and repair; it catalyses the synthesis of new DNA strands by adding nucleotides to a growing DNA chain based on the template strand) to extend the new strand from both primers, amplifying the region between them. 
 -In DNA sequencing, primers are used to initiate the sequencing reactions. The primer binds to the template DNA and provides a starting point for DNA polymerase to synthasise the new strand while incoroporating fluorescently labeled nucleotides to determine the sequence.*
 
-**2. Loading the flow cell**
+# 2. Loading the flow cell
 Flow cell: The prepared library (including adapters/barcodes)is loaded onto a flow cell which is specialised depending on the sequencer.
 
 ***What is a flow cell????***
@@ -62,10 +59,10 @@ Flow cell: The prepared library (including adapters/barcodes)is loaded onto a fl
 ***- Illumina flow cell**: These have a surface coated with oligonucleotides (short sequence of nucleotides, few to several dozen bases long) that bind DNA fragments. During sequencing, fluorescently labeled nucleotides are incorporated into the DNA, and the flow cell captures the resulting fluorescent signals to determine the sequence.*
 ***- Oxford Nanopore flow cell**: In nanopore sequencing, the flow cell contains nanopores embedded in a membrane. DNA molecules pass through these pores, and changes in electrical current are measured to determine the DNA sequence.*
 
-*Illumina only* **3. Cluser generation**
+# *Illumina only* 3. Cluser generation
 **Bridge amplification**: In the flow cell, each DNA fragment with its adapters is locally amplified. This process creates millions of clusers of identical DNA fragments. Each cluster originates from a single DNA fragment and contains many copies of it. 
 
-**3. Sequencing**
+# 3. Sequencing**
 
 *Nanopore*
 **DNA translocation**: The DNA is driven through the nanopores. As they pass through, the electrical current changes in a manner that is specific to each DNA base. This current change is continuously recorded. 
@@ -77,16 +74,16 @@ Flow cell: The prepared library (including adapters/barcodes)is loaded onto a fl
 **Fluorescent detection***: Each time a nucleotide is added, it emits a specific fluroscent signal. The system captures these signals to determine which base (A, T, C, G) was added at each position in the DNA fragment
 **Read generation**: The sequencing machine records these fluorescent signals and generates a sequence read, which is the raw sequence data of the DNA fragment
 
-**4. Data Analysis**
+# 4. Data Analysis
 **- Base Calling**: The raw signal data from the electrical current changes (ONT) or fluorescent signals (Illumina) are processed using basecalling algorithms to determine the sequence of bases in the DNA. 
 **- Data processing**: The basecalled sequences are then assembled and analysed to provide insights into the genetic information. 
 
-**Key features of PromethION**:
+# Key features of PromethION:
 **Long Reads:** One of the main advantages of ONT is its ability to generate very long reads, often spanning thousands to hundreds of thousands of bases. This is useful for resolving complex genomic regions, repetitive sequences, and structural variants. 
 **High throughput**: The PromethION is capable of producing large amounts of sequencing data, making it suitable for large-scale projects and comprehensive genome analysis
 **Real time sequencing**: Nanopore sequencing can provide data in real time as the DNA molecules pass through the nanopores. This allows for immediate analysis and potentially faster results 
 
-**Key features of Illumina data**
+# Key features of Illumina data:
 **High throughput**: Illumina sequencing generates millions of reads in a single run, providing comprehensive coverage of the genome or transcriptome
 **Short reads**: Illumina technology typically produces relatively short reads, often ranging from 75-300 bases in length. These reads are highly accurate, but may need to be assembled to cover longer genomic regions 
 **High accuracy**: Illumina sequencing is known for its high accuracy and reliability, making it a popular choice for various genomic studies 
