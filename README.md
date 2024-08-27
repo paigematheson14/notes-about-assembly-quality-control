@@ -6,12 +6,12 @@ A genome assembly is the process of piecing together the complete DNA sequence o
 
 There are several different methods for sequencing. The data I have for my genome assemblies are **long-read PromethION Nanopore data** and **short-read Illumina data**. 
 
-**PromethION Nanopore**
+### **PromethION Nanopore** ###
 PromethION is a high-thoroughput sequencer developed by Oxford Nanopore Technologies (ONT). It is designed for generating long-read DNA sequencing data. Unlike traditional sequencing methods, which rely on detecting fluroscent signals or chemical reactions, nanopore sequencing uses a different approach to read DNA sequences. 
 
 Nanopore sequencing involves passing a DNA molecule through a tiny protein nanopore embedded in a membrane. As the DNA strand translocated through the nanopore, changes in electrical current are measured. Each DNA base (i.e., A, T, G, C) causes a characteristic disruption in the current, allowing the sequence of bases to be inferred. 
 
-**Illumina sequencing**
+### **Illumina sequencing** ###
 Illumina sequencing, also known as sequencing by synthesis (SBS), is a method that generates large volumes of DNA sequence data with high accuracy. It is commonly used for whole genome sequencing, targeted sequencing, RNA sequencing, and other applications. 
 
 # Sequencing process:
