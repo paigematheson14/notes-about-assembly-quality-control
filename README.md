@@ -2,7 +2,7 @@
 This repository includes notes about genome assemblies and assessing the quality of genome assemblies (i.e., what all of the different metrics mean)
 
 # What is a genome assembly?
-A genome assembly is the process of piecing together the complete DNA sequence of an organism's genome from shorter DNA fragments. It is an essential step in genomics and involves several key stages. 
+A genome assembly is the process of piecing together the complete DNA sequence of an organism's genome from shorter DNA fragments. It is an essential step in genomics and involves several key stages.
 
 There are several different methods for sequencing. The data I have for my genome assemblies are **long-read PromethION Nanopore data** and **short-read Illumina data**. 
 
